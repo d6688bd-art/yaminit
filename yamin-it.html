@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yamin IT</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Hind+Siliguri:wght@400;500;600&family=Noto+Serif+Bengali:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f0e6;--ink:#1d1a14;--mute:#6f6755;--gold:#8a6a2b;--line:rgba(60,45,15,.2);--glass:rgba(255,250,240,.75);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0c0a;--ink:#efe6d4;--mute:#a09783;--gold:#cfae6c;--line:rgba(207,174,108,.24);--glass:rgba(22,20,15,.7);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d0c0a;--ink:#efe6d4;--mute:#a09783;--gold:#cfae6c;--line:rgba(207,174,108,.24);--glass:rgba(22,20,15,.7);color-scheme:dark}
+html{scroll-padding-top:24px}*{box-sizing:border-box}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 'Hind Siliguri',system-ui,sans-serif}
+h1,h2,.serif{font-family:'Cormorant Garamond','Noto Serif Bengali',Georgia,serif;font-weight:600;line-height:1.1;margin:0}
+a{color:inherit}a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+aside{position:fixed;top:0;left:0;bottom:0;width:260px;padding:calc(32px + env(safe-area-inset-top,0px)) 26px 26px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:30px;background:var(--bg);z-index:5}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mark{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font:600 24px 'Cormorant Garamond',serif}
+.brand b{font:600 26px 'Cormorant Garamond',serif}
+nav{display:flex;flex-direction:column;gap:2px}
+nav a{padding:10px 0 10px 14px;border-left:1px solid var(--line);text-decoration:none;color:var(--mute);transition:color .2s,border-color .2s}
+nav a:hover,nav a[aria-current]{color:var(--ink);border-color:var(--gold)}
+.tools{margin-top:auto;display:flex;gap:8px}
+.tools button{flex:1;padding:8px;border:1px solid var(--line);background:var(--glass);color:var(--ink);border-radius:999px;font:inherit;font-size:14px;cursor:pointer;backdrop-filter:blur(10px)}
+main{margin-left:260px;padding:0 clamp(24px,6vw,88px)}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;gap:28px;max-width:860px}
+h1{font-size:clamp(46px,8vw,104px);animation:rise 1s both}
+.hero p{max-width:34em;color:var(--mute);font-size:20px;margin:0}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}}
+.btn{align-self:flex-start;display:inline-block;padding:13px 28px;border:1px solid var(--gold);border-radius:999px;background:var(--gold);color:var(--bg);text-decoration:none;font-weight:600;border-width:1px;cursor:pointer;font-family:inherit;font-size:16px;transition:background .2s,color .2s}
+.btn:hover{background:transparent;color:var(--gold)}
+section{padding:84px 0;border-top:1px solid var(--line);max-width:860px}
+h2{font-size:clamp(34px,4.4vw,52px);margin-bottom:18px}
+.lead{color:var(--mute);margin:0 0 30px}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);text-decoration:none;transition:padding .25s,color .2s}
+.row:hover{padding-left:12px;color:var(--gold)}
+.row span:last-child{color:var(--mute);font-size:15px;word-break:break-all;text-align:right}
+.about{display:grid;grid-template-columns:1fr 250px;gap:44px;align-items:start}
+.orb{width:250px;height:250px;position:sticky;top:40px}
+.orb svg{width:100%;height:100%;overflow:visible}
+.spin{transform-origin:120px 120px;animation:sp 26s linear infinite}.spin2{animation-duration:16s;animation-direction:reverse}
+.pulse{transform-origin:120px 120px;animation:pl 4s ease-in-out infinite}
+@keyframes sp{to{transform:rotate(360deg)}}@keyframes pl{50%{transform:scale(1.07)}}
+dl{margin:26px 0}dt{font:600 22px 'Cormorant Garamond','Noto Serif Bengali',serif;margin-top:16px}dd{margin:0;color:var(--mute)}
+form{display:grid;gap:18px;max-width:600px}label{display:grid;gap:6px;font-size:15px;color:var(--mute)}
+input,textarea{font:inherit;color:var(--ink);background:var(--glass);border:1px solid var(--line);border-radius:12px;padding:12px 14px;backdrop-filter:blur(10px)}
+textarea{min-height:130px;resize:vertical}#st{min-height:1.6em;color:var(--gold);margin:0}
+@media(max-width:860px){
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:9}
+aside{position:sticky;top:env(safe-area-inset-top,0px);width:auto;padding:14px 18px 0;gap:10px;border:0;border-bottom:1px solid var(--line);flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.brand b{font-size:22px}.mark{width:34px;height:34px;font-size:20px}
+.tools{margin:0}.tools button{padding:6px 14px}
+nav{flex-direction:row;width:100%;overflow-x:auto;gap:18px;order:3}
+nav a{border:0;border-bottom:2px solid transparent;padding:8px 0;white-space:nowrap}nav a:hover,nav a[aria-current]{border-color:var(--gold)}
+main{margin-left:0}.hero{min-height:70vh}.about{grid-template-columns:1fr}.orb{position:static;width:200px;height:200px;order:-1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body>
+<aside>
+<a class="brand" href="#top" aria-label="Yamin IT"><span class="mark" id="logo">Y</span><b>Yamin IT</b></a>
+<nav id="nav">
+<a href="#contact" data-t="n1"></a><a href="#about" data-t="n2"></a><a href="#playlists" data-t="n3"></a><a href="#owner" data-t="n4"></a><a href="#quiz" data-t="n5"></a>
+</nav>
+<div class="tools"><button id="lang" aria-label="Language">বাংলা</button><button id="theme" data-t="th"></button></div>
+</aside>
+<main id="top">
+<div class="hero"><h1 data-t="h1"></h1><p data-t="hp"></p><a class="btn" href="https://www.youtube.com/@Yaminit8" target="_blank" rel="noopener" data-t="cta"></a></div>
+
+<section id="contact"><h2 data-t="n1"></h2><p class="lead" data-t="cp"></p>
+<a class="row" href="https://www.youtube.com/@Yaminit8" target="_blank" rel="noopener"><span>YouTube</span><span>@Yaminit8</span></a>
+<a class="row" href="https://www.facebook.com/yaminit8" target="_blank" rel="noopener"><span>Facebook</span><span>facebook.com/yaminit8</span></a>
+<a class="row" href="mailto:yaminit2452026@gmail.com"><span>Gmail</span><span>yaminit2452026@gmail.com</span></a></section>
+
+<section id="about"><div class="about"><div>
+<h2 data-t="ah"></h2><p data-t="a1"></p><p data-t="a2"></p>
+<dl id="offers"></dl>
+<h3 class="serif" style="font-size:26px;margin:28px 0 6px" data-t="mh"></h3><p style="margin:0" data-t="mp"></p>
+<h3 class="serif" style="font-size:26px;margin:22px 0 6px" data-t="vh"></h3><p style="margin:0" data-t="vp"></p>
+<p class="serif" style="font-size:28px;margin:34px 0 0;color:var(--gold)" data-t="tag"></p>
+</div>
+<div class="orb" aria-hidden="true"><svg viewBox="0 0 240 240" fill="none" stroke="var(--gold)">
+<circle class="spin" cx="120" cy="120" r="112" stroke-dasharray="2 9" stroke-width="1.5"/>
+<g class="spin spin2"><circle cx="120" cy="120" r="84" stroke-opacity=".5"/><circle cx="120" cy="36" r="5" fill="var(--gold)" stroke="none"/><circle cx="204" cy="120" r="3" fill="var(--gold)" stroke="none"/></g>
+<g class="pulse"><circle cx="120" cy="120" r="52" fill="var(--glass)"/><text x="120" y="139" text-anchor="middle" fill="var(--gold)" stroke="none" font-family="Cormorant Garamond,serif" font-size="58" font-weight="600">Y</text></g>
+</svg></div></div></section>
+
+<section id="playlists"><h2 data-t="n3"></h2><p class="lead" data-t="pp"></p><div id="pl"></div></section>
+
+<section id="owner"><h2 data-t="oh"></h2><p class="lead" data-t="op"></p>
+<a class="btn" href="https://yamin-digital.base44.app/" target="_blank" rel="noopener" data-t="ob"></a></section>
+
+<section id="quiz"><h2 data-t="qh"></h2><p class="lead" data-t="qp"></p>
+<form id="f" novalidate>
+<label><span data-t="q1"></span><input name="v" type="url" required placeholder="https://youtu.be/…"></label>
+<label><span data-t="q2"></span><textarea name="q" required></textarea></label>
+<label><span data-t="q3"></span><input name="n" autocomplete="name"></label>
+<label><span data-t="q4"></span><input name="m" type="email" autocomplete="email"></label>
+<button class="btn" type="submit" data-t="qb"></button><p id="st" role="status"></p></form></section>
+</main>
+<script>
+const PL=[["Microsoft Office","PLUYkzk7YzCck"],["Google Tutorial","PLb0nq9OWXojQ"],["Social Media Related Video’s","PLN9xWa8U8hJA"],["Ai Related Video’s","PLGdEVKO67Mr8"],["গেমিং টিউটোরিয়াল & স্পোর্টস স্ট্রিমিং গাইড | Yamin it","PLDspwJsjQuaA"],["Pc Tips","PLKAPaIPN9PuI"],["All Office (Like: Microsoft, WPS, Google and Etc)","PLd_ECGoPiGOk"],["Google Sheet & All Project || Microsoft Excel Work Sheet & All Project || WPS XLSX Worksheet & All Project","PLU4lnj0tfXBg"]];
+const OF=[["Digital Marketing","SEO, keyword research, Facebook marketing and digital marketing strategies.","ডিজিটাল মার্কেটিং","এসইও, কিওয়ার্ড রিসার্চ, ফেসবুক মার্কেটিং ও ডিজিটাল মার্কেটিং কৌশল।"],["Website Development","Create, customize, optimize and publish websites using modern tools and AI.","ওয়েবসাইট ডেভেলপমেন্ট","আধুনিক টুল ও এআই দিয়ে ওয়েবসাইট তৈরি, কাস্টমাইজ, অপটিমাইজ ও প্রকাশ করুন।"],["Microsoft Office","Tutorials on Word, Excel, PowerPoint and other productivity tools.","মাইক্রোসফট অফিস","ওয়ার্ড, এক্সেল, পাওয়ারপয়েন্টসহ অন্যান্য প্রোডাক্টিভিটি টুলের টিউটোরিয়াল।"],["Google Workspace","Learn Google Docs, Sheets, Drive and other useful online tools.","গুগল ওয়ার্কস্পেস","গুগল ডকস, শিটস, ড্রাইভসহ দরকারি অনলাইন টুল শিখুন।"],["AI & Technology","Explore artificial intelligence, useful AI tools, software and emerging technologies.","এআই ও প্রযুক্তি","আর্টিফিশিয়াল ইন্টেলিজেন্স, দরকারি এআই টুল, সফটওয়্যার ও নতুন প্রযুক্তি জানুন।"],["Freelancing & Career Development","Practical skills to build your portfolio and prepare for online career opportunities.","ফ্রিল্যান্সিং ও ক্যারিয়ার ডেভেলপমেন্ট","পোর্টফোলিও তৈরি ও অনলাইন ক্যারিয়ারের জন্য প্রয়োজনীয় ব্যবহারিক দক্ষতা।"],["Computer Tutorials","Useful software, applications, tips and tricks to improve your computer skills.","কম্পিউটার টিউটোরিয়াল","কম্পিউটার দক্ষতা বাড়াতে দরকারি সফটওয়্যার, অ্যাপ, টিপস ও ট্রিকস।"]];
+const L={en:{n1:"Contact",n2:"About",n3:"YouTube playlists",n4:"Owner’s website",n5:"Quiz",th:"Dark / Light",h1:"Learn Today, Lead Tomorrow",hp:"Easy, practical tutorials on digital marketing, Office, Google Workspace, AI and more.",cta:"Watch on YouTube",cp:"Reach Yamin IT through any of these.",ah:"About Yamin IT",a1:"Yamin IT is a technology-focused educational platform dedicated to helping people learn digital skills, explore modern technology, and grow in the digital world.",a2:"Our mission is to make technology and digital education simple, accessible, and practical for everyone. We create easy-to-follow tutorials, guides, and educational content to help beginners develop valuable skills and build their digital careers.",mh:"Our Mission",mp:"To empower the next generation with practical digital knowledge, technology skills, and opportunities to succeed in an increasingly digital world.",vh:"Our Vision",vp:"To become a trusted digital learning platform where anyone can discover technology, develop skills, and turn knowledge into opportunities.",tag:"Learn Today, Lead Tomorrow. Stay connected. Keep learning. Keep growing.",pp:"Every Yamin IT playlist in one place.",oh:"Owner’s personal website",op:"Visit the personal website of the Yamin IT owner.",ob:"Visit website",qh:"Ask about a video",qp:"Have a question about one of our videos? Share the video link and your question.",q1:"Video link",q2:"Your question",q3:"Name (optional)",q4:"Gmail (optional, kept private)",qb:"Send question",ok:"Question received. Thank you!",mail:"Opening your email app to send the question…",bad:"Add a video link and your question.",op2:"Open playlist"},
+bn:{n1:"যোগাযোগ",n2:"সম্পর্কে",n3:"ইউটিউব প্লেলিস্ট",n4:"মালিকের ওয়েবসাইট",n5:"কুইজ",th:"ডার্ক / লাইট",h1:"আজ শিখুন, আগামীকাল নেতৃত্ব দিন",hp:"ডিজিটাল মার্কেটিং, অফিস, গুগল ওয়ার্কস্পেস, এআইসহ আরও অনেক বিষয়ে সহজ ও ব্যবহারিক টিউটোরিয়াল।",cta:"ইউটিউবে দেখুন",cp:"যেকোনো মাধ্যমে ইয়ামিন আইটির সাথে যোগাযোগ করুন।",ah:"ইয়ামিন আইটি সম্পর্কে",a1:"ইয়ামিন আইটি একটি প্রযুক্তিভিত্তিক শিক্ষামূলক প্ল্যাটফর্ম, যা মানুষকে ডিজিটাল দক্ষতা শিখতে, আধুনিক প্রযুক্তি জানতে এবং ডিজিটাল দুনিয়ায় এগিয়ে যেতে সাহায্য করে।",a2:"আমাদের লক্ষ্য প্রযুক্তি ও ডিজিটাল শিক্ষাকে সবার জন্য সহজ, সহজলভ্য ও ব্যবহারিক করে তোলা। নতুনদের দক্ষতা অর্জন ও ডিজিটাল ক্যারিয়ার গড়তে আমরা সহজ টিউটোরিয়াল, গাইড ও শিক্ষামূলক কনটেন্ট তৈরি করি।",mh:"আমাদের মিশন",mp:"ক্রমবর্ধমান ডিজিটাল বিশ্বে সফল হতে পরবর্তী প্রজন্মকে ব্যবহারিক ডিজিটাল জ্ঞান, প্রযুক্তি দক্ষতা ও সুযোগ দিয়ে ক্ষমতায়ন করা।",vh:"আমাদের ভিশন",vp:"একটি বিশ্বস্ত ডিজিটাল শিক্ষা প্ল্যাটফর্ম হওয়া, যেখানে যে কেউ প্রযুক্তি জানতে, দক্ষতা গড়তে এবং জ্ঞানকে সুযোগে রূপ দিতে পারবে।",tag:"আজ শিখুন, আগামীকাল নেতৃত্ব দিন। যুক্ত থাকুন। শিখতে থাকুন। এগিয়ে চলুন।",pp:"ইয়ামিন আইটির সব প্লেলিস্ট এক জায়গায়।",oh:"মালিকের ব্যক্তিগত ওয়েবসাইট",op:"ইয়ামিন আইটির মালিকের ব্যক্তিগত ওয়েবসাইট দেখুন।",ob:"ওয়েবসাইটে যান",qh:"ভিডিও নিয়ে প্রশ্ন করুন",qp:"আমাদের কোনো ভিডিও নিয়ে প্রশ্ন আছে? ভিডিওর লিংক ও আপনার প্রশ্ন জানান।",q1:"ভিডিওর লিংক",q2:"আপনার প্রশ্ন",q3:"নাম (ঐচ্ছিক)",q4:"জিমেইল (ঐচ্ছিক, গোপন থাকবে)",qb:"প্রশ্ন পাঠান",ok:"প্রশ্ন পাওয়া গেছে। ধন্যবাদ!",mail:"প্রশ্ন পাঠাতে আপনার ইমেল অ্যাপ খুলছে…",bad:"ভিডিওর লিংক ও প্রশ্ন দিন।",op2:"প্লেলিস্ট খুলুন"}};
+const $=s=>document.querySelector(s),R=document.documentElement;let lang="en",stKey="";
+function sv(k,v){try{localStorage.setItem(k,v)}catch(e){}}function gv(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function render(){const d=L[lang],b=lang==="bn";R.lang=lang;$("#lang").textContent=b?"English":"বাংলা";
+document.querySelectorAll("[data-t]").forEach(e=>e.textContent=d[e.dataset.t]);
+$("#offers").innerHTML=OF.map(o=>`<dt>${o[b?2:0]}</dt><dd>${o[b?3:1]}</dd>`).join("");
+$("#pl").innerHTML=PL.map(p=>`<a class="row" href="https://www.youtube.com/playlist?list=${p[1]}" target="_blank" rel="noopener"><span>${p[0]}</span><span>${d.op2}</span></a>`).join("");
+$("#st").textContent=stKey?d[stKey]:"";document.title="Yamin IT";}
+function setTheme(t){R.dataset.theme=t;sv("yt",t)}
+setTheme(gv("yt")||"dark");lang=gv("yl")||"en";render();
+$("#lang").onclick=()=>{lang=lang==="en"?"bn":"en";sv("yl",lang);render()};
+$("#theme").onclick=()=>setTheme(R.dataset.theme==="dark"?"light":"dark");
+const links=[...document.querySelectorAll("#nav a")];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.toggleAttribute("aria-current",a.hash==="#"+e.target.id))}),{rootMargin:"-40% 0px -55% 0px"});
+document.querySelectorAll("section").forEach(s=>io.observe(s));
+function say(k){stKey=k;$("#st").textContent=L[lang][k]}
+$("#f").onsubmit=async e=>{e.preventDefault();const f=e.target,v=f.v.value.trim(),q=f.q.value.trim(),n=f.n.value.trim();
+if(!v||!q)return say("bad");let ok=false;
+try{const c=window.claude,db=c&&await c.use("db"),u=c&&await c.use("user");
+if(db&&u){const id=await u.id();await db.collection("questions/"+id+"/items").add({video:v,question:q,name:n,email:f.m.value.trim(),lang,at:Date.now()});ok=true}}catch(_){}
+if(ok){say("ok");f.reset()}else{say("mail");location.href="mailto:yaminit2452026@gmail.com?subject="+encodeURIComponent("Video question")+"&body="+encodeURIComponent(v+"\n\n"+q+(n?"\n\n"+n:""))}};
+</script></body></html>
